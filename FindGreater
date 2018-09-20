@@ -1,0 +1,15 @@
+#!/bin/sh
+echo "Enter the first number: "
+read fnum
+echo "Enter the second number: "
+read snum
+
+if [ $fnum -gt $snum ]
+then
+	echo "The First number is greater"
+elif [ $fnum -ge $snum ]
+then
+	echo "Both Number are equal"
+else
+	echo "The second number is greater"
+fi

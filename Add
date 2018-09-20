@@ -1,0 +1,13 @@
+#!/bin/sh
+a=50
+b=30
+c=$((a+b))
+echo "Add: "$c
+
+d=$((a-b))
+echo "Sub: "$d
+
+e=$((a*b))
+echo "Multi: "$e
+
+echo "Div: "$((a/b))

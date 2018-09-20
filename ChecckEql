@@ -1,0 +1,11 @@
+#!/bin/sh
+echo "Enter the first number: "
+read fnum
+echo "Enter the second number: "
+read snum
+if [ $fnum == $snum ]
+then
+	echo "First and Second number are equal"
+else
+	echo "First and Second number are not equal"
+fi

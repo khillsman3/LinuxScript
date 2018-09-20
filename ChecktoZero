@@ -1,0 +1,12 @@
+#!/bin/sh
+echo "Enter the first number: "
+read fnum
+if [ $fnum -gt 0 ]
+then
+	echo "The number is greater than 0"
+elif [ $fnum -lt 0 ]
+then
+	echo "The number is Less than 0"
+else
+	echo "The number is Equal to 0"
+fi
