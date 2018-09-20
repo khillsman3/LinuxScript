@@ -1,0 +1,2 @@
+# LinuxScript
+Linux Scripting language
