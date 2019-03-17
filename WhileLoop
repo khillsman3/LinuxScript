@@ -1,0 +1,7 @@
+#!/bin/bash
+a=0	#a is a variable
+while [ $a -lt 15 ];
+do
+	echo $a
+	a=`expr $a + 1` #the regular expression increments the value
+done

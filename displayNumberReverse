@@ -1,0 +1,12 @@
+#!/bin/bash
+number=1	#a is a variable
+while [ $number -lt 11 ];
+do
+	echo $number
+	number=`expr $number + 1` #the regular expression increments the value
+done
+while [ $number -gt 1 ];
+do
+	number=`expr $number - 1` #the regular expression increments the value
+	echo $number
+done

@@ -1,0 +1,9 @@
+#!/bin/bash
+secretname=jenny
+  echo Try to guess the secret name!
+until [ "$name" = "$secretname" ]
+do
+  echo -e "your guess:\c"
+  read name
+done
+echo Very good.
