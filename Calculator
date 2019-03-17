@@ -1,0 +1,47 @@
+#!/bin/bash
+echo -e "Enter first number: \c"
+read fNumber
+
+echo -e "Enter any arithmetic expression: \c"
+read calculation
+
+echo -e "Enter second number: \c"
+read sNumber
+
+add(){
+	echo "Input: $fNumber $calculation $sNumber"
+  echo "Result: $((fNumber+sNumber))"
+}
+sub(){
+	echo "Input: $fNumber $calculation $sNumber"
+  echo "TResult: $((fNumber-sNumber))"
+}
+multi(){
+	echo "Input: $fNumber $calculation $sNumber"
+  echo "Result: $((fNumber*sNumber))"
+}
+div(){
+  if [ $sNumber -eq 0 ];
+  then
+    echo "Division by zero is undefined"
+  else
+		echo "Input: $fNumber $calculation $sNumber"
+		echo "Result: $((fNumber/sNumber))"
+  fi
+}
+restart(){
+	bash calculator2
+}
+
+case $calculation in
+	"+" | "add" | "ADD") add
+	;;
+	"-" | "substract" | "sub") sub
+	;;
+	"*" | "multiply" | "multi") multi
+	;;
+	"/" | "division" | "divide") div
+	;;
+	*) echo "expression not matched!! Try again" & restart
+	;;
+esac
