@@ -1,0 +1,16 @@
+#!/bin/bash
+restart(){
+	bash ChooseFromList
+}
+PS3="Choose your favourite flower from these possibilities: "
+select FLOWER in daisy bluebeel comflower commomile
+do
+	if [[ -z "$FLOWER" ]]
+		then
+			echo "You typed a wrong figure. Please Try Again!"
+			restart
+		else
+			echo "You choose '$FLOWER' as your favourite."
+	fi
+	break
+done
