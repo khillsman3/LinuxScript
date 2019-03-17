@@ -1,5 +1,5 @@
 #!/bin/bash
-for num in {3..30..3}
+for num in {3..30..3} #from 3 to 30 and 3 will be added in each step
 do
   echo $num
 done
