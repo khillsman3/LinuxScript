@@ -30,7 +30,7 @@ div(){
   fi
 }
 restart(){
-	bash calculator2
+	bash Calculator #Calculator is file name
 }
 
 case $calculation in
