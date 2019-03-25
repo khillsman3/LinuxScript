@@ -9,7 +9,9 @@ checking(){
 	echo -e "enter your Secret key: \c"
 	read key
 	if [[ $key == ab12 ]]; then
-		echo "Welcome $Name"
+		echo "Welcome $Name, your login time is: "
+		d=$(date)
+		echo $d
 	else
 		echo "try again!! you have 2 more chance to enter a home page."
 		a=0	#a is a variable
