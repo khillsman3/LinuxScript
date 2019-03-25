@@ -6,16 +6,23 @@ echo -e "Enter your ID: \c"
 read ID
 
 checking(){
+	echo -e "enter your Secret key: \c"
+	read key
+	if [[ $key == ab12 ]]; then
+		echo "Welcome $Name"
+	else
+		echo "try again!! you have 2 more chance to enter a home page."
 		a=0	#a is a variable
-		b=2
-		while [ $a -lt 3 ];
+		b=1
+
+		while [ $a -lt 2 ];
 		do
 			echo -e "enter your Secret key: \c"
 			read skey
 			if [[ $skey == ab12 ]]; then
 				echo "Welcome $Name"
 			else
-				if [[ $a == 2 ]]; then
+				if [[ $a == 1 ]]; then
 					echo "Sorry! you have no more chance to enter a home page."
 				else
 					echo "try again!! you have $((b-a)) more chance to enter a home page."
@@ -23,6 +30,7 @@ checking(){
 			fi
 			a=`expr $a + 1` #the regular expression increments the value
 		done
+	fi
 }
 
 restart(){
