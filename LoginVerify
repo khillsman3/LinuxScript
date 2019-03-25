@@ -1,0 +1,38 @@
+#!/bin/bash
+#Indra Bahadur Oli
+echo -e "Enter your name: \c"
+read Name
+echo -e "Enter your ID: \c"
+read ID
+
+checking(){
+		a=0	#a is a variable
+		b=2
+		while [ $a -lt 3 ];
+		do
+			echo -e "enter your Secret key: \c"
+			read skey
+			if [[ $skey == ab12 ]]; then
+				echo "Welcome $Name"
+			else
+				if [[ $a == 2 ]]; then
+					echo "Sorry! you have no more chance to enter a home page."
+				else
+					echo "try again!! you have $((b-a)) more chance to enter a home page."
+				fi
+			fi
+			a=`expr $a + 1` #the regular expression increments the value
+		done
+}
+
+restart(){
+  echo "Try again!"
+  bash test
+}
+
+if [[ $Name == "" && $ID == "" ]];
+then
+  restart
+else
+  checking
+fi
