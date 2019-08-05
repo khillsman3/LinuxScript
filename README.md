@@ -1,4 +1,4 @@
-# LinuxScript
+# Shell Scripting
 Linux Scripting language
 
 ## Calculator
