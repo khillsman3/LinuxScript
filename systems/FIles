@@ -1,0 +1,17 @@
+#!/bin/bash
+#Indra Bahadur Oli
+kag(){
+  echo "This is KAG"
+}
+mes(){
+  echo "This is MES"
+}
+reu(){
+  echo "This is REU"
+}
+lor(){
+  echo "This is LOR"
+}
+cou(){
+  echo "This is COU"
+}

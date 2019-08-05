@@ -1,0 +1,42 @@
+#!/bin/bash
+# Indra Bahadur Oli
+checking(){
+		count=0	#a is a variable
+		num2=2
+		while [ $count -lt 3 ];
+		do
+			echo -e "Enter your Secret key:- \c"
+			read -s skey
+			if [[ $skey == indra ]];
+      then
+
+        echo -e "\n\nYou are Welcome! \nlogin id: \t$id"
+        echo -e "Username: \t$name \nSecret key: \t$skey"
+				sessionDate=$(date)
+				echo -e "Login time (Session details):\n$sessionDate"
+
+        source Country #Country is file
+        WorldcupCountry
+
+				break
+			else
+				if [[ $count == $num2 ]];
+        then
+					echo "Sorry! you have no more chance to enter a home page."
+				else
+					echo "try again!! you have $((num2-count)) more chance to enter a home page."
+				fi
+			fi
+			count=`expr $count + 1` #the regular expression increments the value
+		done
+}
+
+if [[ $1 != "" && $2 != "" ]]; then
+  # echo -e "User Name:- \t$1"
+  # echo -e "User ID:- \t$2\n"
+  name=$1
+  id=$2
+  checking
+else
+  echo "You need to enter Username and UserId as a parameter."
+fi

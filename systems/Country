@@ -1,0 +1,34 @@
+#!/bin/bash
+#Indra Bahadur Oli
+WorldcupCountry(){
+  echo -e "\nTop 5 Worldcup played country"
+  echo -e "Country name\t\tCountry code"
+  echo -e "Japan  \t\t\tJPN"
+  echo -e "Argentina  \t\tARG"
+  echo -e "Germany  \t\tGER"
+  echo -e "France  \t\tFAR"
+  echo -e "Brazil  \t\tBRZ"
+
+  chooseCountry
+}
+
+chooseCountry(){
+  countryCode="FAR"
+  echo "Try to guess the best country name!"
+  until [ "$country" = "$countryCode" ]
+  do
+    echo -e "your guess: \c"
+    read country
+    if [[ "$country" = "$countryCode" ]]
+    then
+      break
+    else
+      echo "Sorry!! Wrong input"
+    fi
+  done
+  echo -e "Congratulation!! you choosed France\n"
+  country=""
+
+  source Players #Player is a file
+  playerList
+}
