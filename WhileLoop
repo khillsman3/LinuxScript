@@ -5,3 +5,6 @@ do
 	echo $a
 	a=`expr $a + 1` #the regular expression increments the value
 done
+#comment
+#hfhfh
+#hfhfhhf
